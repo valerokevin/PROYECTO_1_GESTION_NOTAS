@@ -15,7 +15,7 @@ const resultado = document.getElementById("resultado");
 function pintar(lista) {
   resultado.innerHTML = "";
   lista.forEach(apr => {
-    resultado.innerHTML += `<p>${apr.nombre} - ${apr.nota} - ${apr.programa}</p>`;
+    resultado.innerHTML += <p>${apr.nombre} - ${apr.nota} - ${apr.programa}</p>;
   });
 }
 
@@ -37,7 +37,7 @@ function mostrarReprobados() {
 // 4
 function mostrarMayusculas() {
   const nombres = aprendices.map(a => a.nombre.toUpperCase());
-  resultado.innerHTML = nombres.map(n => `<p>${n}</p>`).join("");
+  resultado.innerHTML = nombres.map(n => <p>${n}</p>).join("");
 }
 
 // 5
@@ -72,6 +72,6 @@ function mostrarDesempeno() {
       default: nivel = "Bajo";
     }
 
-    resultado.innerHTML += `<p>${a.nombre}: ${nivel}</p>`;
+    resultado.innerHTML += <p>${a.nombre}: ${nivel}</p>;
   });
 }
